@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Belleza&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --header: #f5ebe0;
+    --backdarkshade: #d6ccc2;
+    --backlightshade: #e3d5ca;
+    --backcolor: #d5bdaf;
+    --productback: #edede9;
+    --text-color: black;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.companyName h1{
+    padding: 0.25em;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.companyName h1 .keys{
+    background-color: black;
+    border-radius: 5px;
+    padding: 0.2em;
+    margin: 0.1em;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0 0 5px white;
+    font-size: 1.1rem;
+}
+header, .navigationUL, .products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    justify-content: space-around;
+    background-color: var(--header);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+nav .navigationUL{
+    list-style: none;
+}
+.navigationUL li a{
+    text-decoration: none;
+    color: black;
+    margin: 1em;
+    display: block;
+}
+.introduction{
+    position: relative;
+    overflow: hidden;
+}
+.introsvg, .introsvg2{
+    position: absolute;
+    z-index: -1;
+}
+.introsvg{
+    height: 400px;
+    width: 400px;
+    left: 10em;
+    transform: scale(2);
+}
+.introsvg2{
+    height: 200px;
+    width: 200px;
+    left: 50em;
+    top: 35em;
+    transform: scale(2);
+}
+.keyboardImage img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.introduction, .about, .products, footer{
+    padding: 1em;
+}
+.IntroTextSection, .detailedintro, .card1, .card2{
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+.card1, .card2{
+    margin: 1em auto;
+}
+.IntroTextSection{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.IntroTextSection *, .DeailedText *, .explaination *{
+    margin: 0.5em 0;
+}
+.detailedintro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    height: 50vh;
+}
+.keyboardImage{
+    width: 35%;
+    height: auto;
+    margin-right: 1.2em;
+}
+.DeailedText{
+    width: 65%;
+    height: auto;
+}
+.DeailedText button, .placeorder button{
+    font-size: 1.3rem;
+    background-color: var(--backcolor);
+    font-weight: bold;
+    padding: 1em;
+    box-shadow: 0 0 5px var(--backcolor);
+}
+.placeorder button{
+    font-size: 1rem;
+    font-weight: normal;
+}
+.DeailedText button:hover{
+    color: white;
+}
+.DeailedText button, .placeorder button{
+    border: none;
+    padding: 0.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.cart button{
+    border: 1px solid var(--backcolor);
+    padding: 0.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--backcolor);
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+    box-shadow: 0 0 5px var(--backcolor);
+}
+.headings{
+    margin: 2em;
+    padding: 1em;
+    text-align: center;
+}
+.card1, .card2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.about img{
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+.card1 div, .card2 div{
+    margin: 1em;
+}
+.card2{
+    text-align: right;
+}
+.products{
+    flex-wrap: wrap;
+    gap: 1.3em;
+}
+.productcard{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(6, 40px);
+    gap: 0.5em;
+    padding: 1em;
+    background-color: var(--productback);
+    border-radius: 10px;
+}
+.item2, .placeorder, .cart, .productcard:last-child{
+    align-self: center;
+    justify-self: center;
+}
+.placeorder, .cart{
+    justify-self: left;
+}
+.item2{
+    justify-self: left;
+}
+.item1{
+    grid-column: 1/4;
+    grid-row: 1/5;
+}
+.item2{
+    grid-column: 1/3;
+    grid-row: 5/6;
+}
+.placeorder{
+    grid-column: 1/2;
+    grid-row: 6/7;
+}
+.cart{
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+.price{
+    grid-column: 3/4;
+    grid-row: 5/7;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.productcard .img1{
+    background-image: url(https://m.media-amazon.com/images/I/81lu2CjuWmL.jpg);
+}
+.productcard .img2{
+    background-image: url(https://m.media-amazon.com/images/I/71gn9anYcRL.jpg);
+}
+.productcard .img3{
+    background-image: url(https://m.media-amazon.com/images/I/71+mEexR6fL.jpg);
+}
+.productcard .img4{
+    background-image: url(https://m.media-amazon.com/images/I/71aARXewm6L._AC_UF1000,1000_QL80_.jpg);
+}
+.productcard .img5{
+    background-image: url(https://m.media-amazon.com/images/I/61SQJz4mztL.jpg);
+}
+.productcard .img6{
+    background-image: url(https://m.media-amazon.com/images/I/51vArucd+EL._AC_UF1000,1000_QL80_.jpg);
+}
+.productcard .img7{
+    background-image: url(https://m.media-amazon.com/images/I/51k+yLyt2rL._AC_UF1000,1000_QL80_.jpg);
+}
+.productcard .img8{
+    background-image: url(https://m.media-amazon.com/images/I/61e-7uVP0rL.jpg);
+}
+.productcard .img9{
+    background-image: url(https://m.media-amazon.com/images/I/61M8Wj7Ds6L._AC_UF1000,1000_QL80_.jpg);
+}
+
+
+/*Mobile Screen*/
+@media screen and (max-width: 660px) {
+    html{
+        font-size: 16px;
+    }
+    .introduction{
+        overflow: hidden;
+    }
+    .detailedintro{
+        flex-direction: column;
+        padding: 0.5em;
+        height: 30vh;
+        margin-top: 2em;
+    }
+    .keyboardImage{
+        width: 100%;
+        height: 150px;
+        margin-right: 0;
+    }
+    .DeailedText{
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+    }
+    .introsvg2{
+        height: 100px;
+        width: 100px;
+        left: 20em;
+        top: 35em;
+        transform: scale(2);
+    }
+    .about img{
+        width: 150px;
+    }
+    .about{
+        padding: 0.5em;
+    }
+}
+
+/*Tablet Screen*/
+@media screen and (min-width:601px) and (max-width: 768px) {
+    .introsvg2{
+        height: 150px;
+        width: 150px;
+        left: 30em;
+        top: 35em;
+        transform: scale(2);
+    }
+}
+
+/*Laptop Screen*/
+@media screen and (min-width:769px) and (max-width: 992px) {
+    .introsvg2{
+        height: 180px;
+        width: 180px;
+        left: 35em;
+        top: 32em;
+        transform: scale(2);
+    }
+}
+
+/*Desktop Screen*/
+@media screen and (min-width:993px) {
+    html{
+        font-size: 18px;
+    }
+}
